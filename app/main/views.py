@@ -1,12 +1,9 @@
-from flask import render_template,redirect,url_for,flash,request
-from flask import Flask
-app = Flask(__name__)
+from flask import render_template,url_for
+from app import app
 
 @app.route('/')
 def events():
 
-    return '<h1>Event works</h1>'
+    return render_template('events.html')
 
 
-if __name__ == '__main__':
-    app.run(debug = True)

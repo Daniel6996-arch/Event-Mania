@@ -1,21 +1,4 @@
-#import sys
-from app import create_app
-from flask_script import Manager,Server
+from app import app
 
-
-
-# Creating app instance
-app = create_app('development')
-
-manager = Manager(app)
-
-manager.add_command('server',Server)
-
-manager.add_command('server',Server)
-
-
-@manager.shell
-def make_shell_context():
-    return dict(app = app,db = db,User = User, Blog = Blog )
 if __name__ == '__main__':
-    manager.run()
+    app.run(debug = True)
