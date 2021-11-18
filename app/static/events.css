@@ -1,6 +1,4 @@
-*{
-    background-color: rgb(204, 172, 172);
-}
+
 #flex{
     display: flex;
     flex-direction: row;
