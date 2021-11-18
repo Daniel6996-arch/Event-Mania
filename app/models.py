@@ -7,6 +7,7 @@ class Event(db.Model):
     '''
     id = db.Column(db.Integer,primary_key = True)
     name = db.Column(db.String(255))
+    day = db.Column(db.String(255))
     #time = db.Column(db.String(255))
     location = db.Column(db.String(255))
     price = db.Column(db.Integer)

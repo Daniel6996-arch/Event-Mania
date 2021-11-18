@@ -4,9 +4,10 @@ from wtforms.validators import Required
 
 
 class EventForm(FlaskForm):
-    name = StringField('Enter a topic')
-    time = StringField('Enter a topic')
-    location = StringField('Enter a topic')
-    owner = StringField('Enter a topic')
-    price = StringField('Enter a topic')
+    name = StringField('Enter name of event')
+    day = StringField('Enter day of event')
+    #time = StringField('Enter time of event')
+    location = StringField('Enter location with Nairobi')
+    owner = StringField('Enter name of event owner/ticketing manager')
+    price = StringField('Enter you charges')
     submit = SubmitField('Submit') 
