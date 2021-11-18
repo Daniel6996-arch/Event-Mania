@@ -18,7 +18,15 @@ deactivate () {
     # be called to get it to forget past commands.  Without forgetting
     # past commands the $PATH changes we made may not be respected
     if [ -n "${BASH:-}" -o -n "${ZSH_VERSION:-}" ] ; then
+<<<<<<< HEAD
         hash -r
+=======
+<<<<<<< HEAD
+        hash -r 2> /dev/null
+=======
+        hash -r
+>>>>>>> 2c38bc68549c550e73e7b665f4eee9da4fa87299
+>>>>>>> 721619b390f7e6556acb8d72426a8f5cb5b3d85d
     fi
 
     if [ -n "${_OLD_VIRTUAL_PS1:-}" ] ; then
@@ -28,7 +36,15 @@ deactivate () {
     fi
 
     unset VIRTUAL_ENV
+<<<<<<< HEAD
     if [ ! "$1" = "nondestructive" ] ; then
+=======
+<<<<<<< HEAD
+    if [ ! "${1:-}" = "nondestructive" ] ; then
+=======
+    if [ ! "$1" = "nondestructive" ] ; then
+>>>>>>> 2c38bc68549c550e73e7b665f4eee9da4fa87299
+>>>>>>> 721619b390f7e6556acb8d72426a8f5cb5b3d85d
     # Self destruct!
         unset -f deactivate
     fi
@@ -37,7 +53,15 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
+<<<<<<< HEAD
 VIRTUAL_ENV="/home/access/Desktop/Flask/Watchlist/virtual"
+=======
+<<<<<<< HEAD
+VIRTUAL_ENV="/home/moringa/Event-Mania/virtual"
+=======
+VIRTUAL_ENV="/home/morings/Desktop/Event-Mania/Event-Mania/virtual"
+>>>>>>> 2c38bc68549c550e73e7b665f4eee9da4fa87299
+>>>>>>> 721619b390f7e6556acb8d72426a8f5cb5b3d85d
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
@@ -54,6 +78,12 @@ fi
 
 if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
     _OLD_VIRTUAL_PS1="${PS1:-}"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    PS1="(virtual) ${PS1:-}"
+=======
+>>>>>>> 721619b390f7e6556acb8d72426a8f5cb5b3d85d
     if [ "x(virtual) " != x ] ; then
 	PS1="(virtual) ${PS1:-}"
     else
@@ -65,6 +95,10 @@ if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
         PS1="(`basename \"$VIRTUAL_ENV\"`)$PS1"
     fi
     fi
+<<<<<<< HEAD
+=======
+>>>>>>> 2c38bc68549c550e73e7b665f4eee9da4fa87299
+>>>>>>> 721619b390f7e6556acb8d72426a8f5cb5b3d85d
     export PS1
 fi
 
@@ -72,5 +106,13 @@ fi
 # be called to get it to forget past commands.  Without forgetting
 # past commands the $PATH changes we made may not be respected
 if [ -n "${BASH:-}" -o -n "${ZSH_VERSION:-}" ] ; then
+<<<<<<< HEAD
     hash -r
+=======
+<<<<<<< HEAD
+    hash -r 2> /dev/null
+=======
+    hash -r
+>>>>>>> 2c38bc68549c550e73e7b665f4eee9da4fa87299
+>>>>>>> 721619b390f7e6556acb8d72426a8f5cb5b3d85d
 fi

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/home/access/Desktop/Flask/Watchlist/virtual/bin/python
+=======
+#!/home/moringa/Event-Mania/virtual/bin/python
+>>>>>>> 721619b390f7e6556acb8d72426a8f5cb5b3d85d
 # -*- coding: utf-8 -*-
 import re
 import sys
