@@ -2,6 +2,18 @@ import os
 
 <<<<<<< HEAD
 class Config:
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/events'
+    SECRET_KEY = '236d1ffbf7aa6933f300c626273e39ed'
+
+class ProdConfig(Config):
+    #SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    pass
+
+
+class DevConfig(Config):
+=======
+<<<<<<< HEAD
+class Config:
     UPLOADED_PHOTOS_DEST ='app/static/photos'
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
@@ -38,11 +50,14 @@ class ProdConfig(Config):
 
 class DevConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/blog'
+>>>>>>> 721619b390f7e6556acb8d72426a8f5cb5b3d85d
     DEBUG = True
 
 config_options = {
 'development':DevConfig,
 'production':ProdConfig
+<<<<<<< HEAD
+=======
 
 =======
     MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
@@ -76,4 +91,5 @@ config_options = {
     'production': ProdConfig,
     'test': TestConfig
 >>>>>>> 2c38bc68549c550e73e7b665f4eee9da4fa87299
+>>>>>>> 721619b390f7e6556acb8d72426a8f5cb5b3d85d
 }

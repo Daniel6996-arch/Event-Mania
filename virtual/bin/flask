@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+#!/home/access/Desktop/Flask/Watchlist/virtual/bin/python
+=======
+<<<<<<< HEAD
 #!/home/moringa/Event-Mania/virtual/bin/python
 =======
 #!/home/morings/Desktop/Event-Mania/Event-Mania/virtual/bin/python
 >>>>>>> 2c38bc68549c550e73e7b665f4eee9da4fa87299
+>>>>>>> 721619b390f7e6556acb8d72426a8f5cb5b3d85d
 # -*- coding: utf-8 -*-
 import re
 import sys

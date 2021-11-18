@@ -1,4 +1,39 @@
 <<<<<<< HEAD
+from flask import render_template,request,redirect,url_for,abort
+from . import main
+import urllib.request,json
+import requests
+from ..models import Event
+from .forms import EventForm
+from .. import db
+
+
+
+@main.route('/events',methods=['GET','POST'])    
+def events():
+    event_form = EventForm()
+    if event_form.validate_on_submit():
+        new_event = Event(name = event_form.name.data, day = event_form.day.data, location = event_form.location.data,price = event_form.price.data, owner = event_form.owner.data )
+        db.session.add(new_event)
+        db.session.commit()
+        
+
+    return render_template('events.html', event_form = event_form)
+
+@main.route('/newly-posted',methods=['GET','POST'])    
+def recent():
+    
+    try:
+        events = Event.query.all()
+    except Exception as e:
+        # e holds description of the error
+        error_text = "<p>The error:<br>" + str(e) + "</p>"
+        hed = '<h1>Something is broken.</h1>'
+        return hed + error_text
+
+    return render_template('recent.html', events = events)
+=======
+<<<<<<< HEAD
 from flask import Flask, render_template, request
 from .forms import ContactForm
 from app import app
@@ -88,3 +123,4 @@ def update_pic(uname):
     return redirect(url_for('main.profile',uname=uname))
 >>>>>>> 3c416bbb2737052b6fb177ba277bf5f7f6b20c75
 >>>>>>> 2c38bc68549c550e73e7b665f4eee9da4fa87299
+>>>>>>> 721619b390f7e6556acb8d72426a8f5cb5b3d85d

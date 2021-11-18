@@ -1,5 +1,12 @@
 from flask import Flask
 <<<<<<< HEAD
+from config import config_options
+from flask_bootstrap import Bootstrap
+from flask_sqlalchemy import SQLAlchemy
+from os import path
+
+=======
+<<<<<<< HEAD
 from flask_bootstrap import Bootstrap
 
 
@@ -25,10 +32,38 @@ from flask_mail import Mail
 login_manager = LoginManager()
 login_manager.session_protection = 'strong'
 login_manager.login_view = 'auth.login'
+>>>>>>> 721619b390f7e6556acb8d72426a8f5cb5b3d85d
 
 
 bootstrap = Bootstrap()
 db = SQLAlchemy()
+<<<<<<< HEAD
+
+def create_app(config_name):
+    app = Flask(__name__)
+
+    # Creating the app configurations
+    app.config.from_object(config_options[config_name])
+    app.config['SECRET_KEY'] = '236d1ffbf7aa6933f300c626273e39ed'
+
+    # Initializing flask extensions
+    #login_manager.init_app(app)
+    db.init_app(app)
+    bootstrap.init_app(app)
+    
+    # Registering the blueprint
+    from .main import main as main_blueprint
+    app.register_blueprint(main_blueprint)
+     
+    
+    from .models import Event
+
+    #create_database(app)
+
+    # setting config
+    return app
+
+=======
 photos = UploadSet('photos',IMAGES)
 mail = Mail()
 
@@ -62,3 +97,4 @@ def create_app(config_name):
     return app
 >>>>>>> 3c416bbb2737052b6fb177ba277bf5f7f6b20c75
 >>>>>>> 2c38bc68549c550e73e7b665f4eee9da4fa87299
+>>>>>>> 721619b390f7e6556acb8d72426a8f5cb5b3d85d
