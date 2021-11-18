@@ -1,14 +1,16 @@
-class Event:
-    '''
-    Pitch class to define Pitch Objects
-    '''
+from . import db
 
-    def __init__(self,name,time,location,price,owner,followers,category ):
-        self.name = name
-        self.time = time
-        self.location = location
-        self.price = price
-        self.owner = owner
-        self.followers = followers
-        self.category = category
+class Event(db.Model):
+    __tablename__ = 'events'
+    '''
+    Event class to define Event items
+    '''
+    id = db.Column(db.Integer,primary_key = True)
+    name = db.Column(db.String(255))
+    #time = db.Column(db.String(255))
+    location = db.Column(db.String(255))
+    price = db.Column(db.Integer)
+    owner = db.Column(db.String(255))
+    #followers = db.Column(db.Integer)
+    #category = db.Column(db.String(255),index = True)
         
